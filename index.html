@@ -39,6 +39,16 @@
       border-width: 20px;
       border-color: red transparent transparent transparent;  /* 透明 */
     }
+    .ex5 {                 /* 三角形４つ */
+      width: 0px;
+      height: 0px;
+      background: #eee;
+      border-style: solid;
+      /* border-width: 40px 20px 20px 20px; */
+      border-width: 40px 20px 20px 0;
+      border-color: red blue pink green;
+      transform: skew(-15deg, 0);     /* 要素を変化　傾斜変形 */
+  }
   </style>
 </head>
 <body>
@@ -50,5 +60,7 @@
   <div class="ex3"></div>
   <h2>ex4</h2>
   <div class="ex4"></div>
+  <h2>ex5</h2>
+  <div class="ex5"></div>
 </body>
 </html>
