@@ -86,6 +86,38 @@
       border-width: 15px 20px 10px 0;
       border-color:#eee transparent transparent transparent;
     }
+    .balloon2-1 {
+      width: 200px;
+      height: 100px;
+      /* background: #eee; */
+      border: 1px solid #eee;     /* 枠線 */
+      border-radius: 3px;
+      position: relative;
+    }
+    .balloon2-1:before {      /* 吹出し三角形 */
+      position: absolute;
+      right: 20px;
+      bottom: -20px;
+      content: '';    /* begore擬似要素にはcontentプロパティ必須 */
+      width: 0;
+      /* background: #eee; */
+      height: 0;
+      border-style: solid;
+      border-width: 10px;
+      border-color:#eee transparent transparent transparent;
+    }
+    .balloon2-1::after {      /* 吹出し三角形 */
+      position: absolute;
+      right: 20px;
+      bottom: -19px;  /* 白色三角形を上に1pxズラし、beforeの一部を枠線として表示 */
+      content: '';    /* begore擬似要素にはcontentプロパティ必須 */
+      width: 0;
+      /* background: #eee; */
+      height: 0;
+      border-style: solid;
+      border-width: 10px;
+      border-color: #fff transparent transparent transparent;
+    }
   </style>
 </head>
 <body>
@@ -103,5 +135,7 @@
   <div class="balloon1-1"></div>
   <h2>balloon1-2</h2>
   <div class="balloon1-2"></div>
+  <h2>balloon2-1</h2>
+  <div class="balloon2-1"></div>
 </body>
 </html>
