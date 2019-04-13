@@ -48,7 +48,26 @@
       border-width: 40px 20px 20px 0;
       border-color: red blue pink green;
       transform: skew(-15deg, 0);     /* 要素を変化　傾斜変形 */
-  }
+    }
+    .balloon1-1 {
+      width: 200px;
+      height: 100px;
+      background: #eee;
+      border-radius: 3px;
+      position: relative;
+    }
+    .balloon1-1:before {      /* 吹出し三角形 */
+      position: absolute;
+      right: 20px;
+      bottom: -20px;
+      content: '';    /* begore擬似要素にはcontentプロパティ必須 */
+      width: 0;
+      /* background: #eee; */
+      height: 0;
+      border-style: solid;
+      border-width: 10px;
+      border-color:#eee transparent transparent transparent;
+    }
   </style>
 </head>
 <body>
@@ -62,5 +81,7 @@
   <div class="ex4"></div>
   <h2>ex5</h2>
   <div class="ex5"></div>
+  <h2>balloon1-1</h2>
+  <div class="balloon1-1"></div>
 </body>
 </html>
